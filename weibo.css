@@ -1,0 +1,27 @@
+div [ad-data],/*右侧广告*/
+div [feedtype=ad],/*微博中的广告*/
+div [node-type=feed_spread]/*微博中的推荐*/ {
+	display: none !important
+}
+
+#v6_pl_rightmod_hongbao, /*红包*/
+#v6_pl_rightmod_rank， /*排行*/
+#v6_trustPagelet_recom_member, /*明星*/
+#v6_trustPagelet_recom_member,
+#v6_pl_rightmod_recominfo > div {
+	display: none;
+}
+#v6_pl_rightmod_recominfo div:first-child {
+	display: block;
+}
+
+/*feed flow */
+.WB_cardtitle_b.S_line2 {
+	display: none;
+}
+.WB_cardtitle_b.S_line2 ~ .WB_feed_detail {
+	display: none;
+}
+.WB_cardtitle_b.S_line2 ~ .WB_feed_handle {
+	display: none;
+}
