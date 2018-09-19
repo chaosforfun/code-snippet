@@ -1,5 +1,5 @@
 function scrollable(node, container) {
-  let parent = node.parentNode
+  let parent = node
   while (parent !== container) {
     let overflow = getComputedStyle(parent).overflowY
     if (overflow === 'scroll' || overflow === 'auto') {
