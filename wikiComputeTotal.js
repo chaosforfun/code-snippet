@@ -3,13 +3,16 @@ function lastIndexValue(arr, i) {
   let index = l - i;
   return arr.children[index].innerText;
 }
-coderMap = {}
-let total = [].slice.apply(document.querySelectorAll('.confluenceTable tr')).map(tr => {
-let h = lastIndexValue(tr, 1)
-let coder = lastIndexValue(tr, 0)
-coderMap[coder] = coderMap[coder] || 0
-coderMap[coder] += parseInt(h)
-h = parseInt(h, 10) || 0
-return h
-}).reduce((s, h) => s + h, 0)
-console.log(total, coderMap)
+function printTime() {
+  coderMap = {}
+  let total = [].slice.apply(document.querySelectorAll('.confluenceTable tr')).map(tr => {
+  let h = lastIndexValue(tr, 1)
+  let coder = lastIndexValue(tr, 0)
+  coderMap[coder] = coderMap[coder] || 0
+  coderMap[coder] += parseInt(h)
+  h = parseInt(h, 10) || 0
+  return h
+  }).reduce((s, h) => s + h, 0)
+  console.log(total, coderMap)
+}
+printTime()
