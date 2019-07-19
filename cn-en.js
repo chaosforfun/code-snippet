@@ -3,7 +3,7 @@ function getEn(table, baseIndex) {
     Array.from(table.querySelectorAll('tr'))
         .forEach((tr) => {
             let tds = Array.from(tr.children)
-            str += `"${tds[baseIndex].innerText.replace('\n', '')}":"${tds[baseIndex + 1].innerText.replace('\n', '')}",\n`;
+            str += `"${tds[baseIndex].innerText.replace(/\n/g, '')}":"${tds[baseIndex + 1].innerText.replace(/\n/g, ''))}",\n`;
         });
     console.log(str);
     return str;
