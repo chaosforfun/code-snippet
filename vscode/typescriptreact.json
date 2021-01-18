@@ -1,0 +1,52 @@
+{
+	// Place your snippets for typescriptreact here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"React Component": {
+    "prefix": "Component",
+    "body": [
+      "import * as React from 'react'",
+      "import classBind from 'classnames/bind'",
+      "const styles = require('./style.styl')",
+      "",
+      "let cx = classBind.bind(styles)",
+      "",
+      "interface PropTypes {",
+      " className?: string",
+      "}",
+      "export default class ${TM_DIRECTORY/.*\\/(.+$)/$1/} extends React.Component<PropTypes> {",
+      "  render() {",
+      "    return (",
+      "      <div className={cx(this.props.className)}></div>",
+      "    )",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "React styles": {
+    "prefix": "styles",
+    "body": [
+      "const styles = require('./style.styl')",
+      "import classBind from 'classnames/bind'",
+      "let cx = classBind.bind(styles)"
+    ]
+  },
+  "React class": {
+    "prefix": "cnx",
+    "body": [
+      "className={cx('$0')}",
+    ]
+  }
+}
+
